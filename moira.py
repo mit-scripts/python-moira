@@ -149,7 +149,7 @@ def access(handle, *args, **kwargs):
     try:
         _moira._access(handle, *args)
         return True
-    except MoiraException, e:
+    except MoiraException as e:
         if e.code != errors()['MR_PERM']:
             raise
         return False

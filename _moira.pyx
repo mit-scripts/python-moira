@@ -1,3 +1,5 @@
+# cython: c_string_type=unicode, c_string_encoding=ascii
+
 cdef extern from "moira/moira.h":
     int mr_krb5_auth(char * prog)
     int mr_auth(char * prog)
@@ -57,6 +59,8 @@ def connect(server=''):
     if __connected:
         disconnect()
     
+    if isinstance(server, unicode):
+        server = server.encode('idna')
     status = mr_connect(server)
     if status != MR_SUCCESS:
         _error(status)
