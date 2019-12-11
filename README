@@ -2,14 +2,14 @@
 Installing PyMoira
 ==================
 
-To install PyMoira, you will first need to install Pyrex_. It's always
-a good idea to install Pyrex through your package manager, if
-possible. Your system's Pyrex package may be named ``python-pyrex`` or
-``pyrex-py25``. If your package manager doesn't have a package for
-Pyrex, or if you wish to install Pyrex by hand anyway, you can do so
+To install PyMoira, you will first need to install Cython_. It's
+always a good idea to install Cython through your package manager, if
+possible. Your system's Cython package may be named ``python3-cython``
+or ``py37-cython``. If your package manager doesn't have a package for
+Cython, or if you wish to install Cython by hand anyway, you can do so
 by running::
 
-  $ easy_install Pyrex
+  $ easy_install Cython
 
 Once you've done that, to install PyMoira globally, run::
 
@@ -33,7 +33,7 @@ build the Debian package of the latest release, run::
 
 You will need the devscripts and git-buildpackage packages installed,
 as well as this package's build dependencies (debhelper, cdbs,
-python-all-dev, python-support, python-pyrex, python-setuptools,
+python-all-dev, python-support, python-cython, python-setuptools,
 debathena-libmoira-dev).
 
-.. _Pyrex: http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/
+.. _Cython: https://cython.org/
